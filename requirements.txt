@@ -1,4 +1,6 @@
 streamlit
 langchain
-grow
+groq
 tiktoken
+langchain_community
+langchain-groq
