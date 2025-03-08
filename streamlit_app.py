@@ -14,7 +14,7 @@ st.image("PragyanAI_Transperent.png")  # Adjust width as needed
 st.divider()  # 👈 Draws a horizontal rule
 st.title('🦜🔗 Text Summarization App')
 st.divider()  # 👈 Draws a horizontal rule
-
+st.image("PragyanAI_Transperent.png")  # Adjust width as needed
 # get API Key
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
