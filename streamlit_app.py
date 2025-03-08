@@ -8,7 +8,9 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
 
 # Page title
-st.set_page_config(page_title='🦜🔗 Text Summarization App')
+st.set_page_config(page_title='PragyanAI-Text Summarization App')
+# Display the logo at the top of the page
+st.image("PragyanAI_Transperent.png", width=150)  # Adjust width as needed
 st.title('🦜🔗 Text Summarization App')
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
