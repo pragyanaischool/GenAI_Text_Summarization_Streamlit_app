@@ -1,4 +1,5 @@
 import streamlit as st
+from groq import Groq
 from langchain.chat_models import ChatGroq
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
