@@ -9,9 +9,9 @@ from langchain.chains.summarize import load_summarize_chain
 # Page title
 st.set_page_config(page_title='🦜🔗 Text Summarization App')
 st.title('🦜🔗 Text Summarization App')
-client = Groq(
-    api_key=st.secrets["GROQ_API_KEY"],
-)
+#client = Groq(
+#    api_key=st.secrets["GROQ_API_KEY"],
+#)
 def generate_response(txt):
     # Instantiate the LLM model
     #llm = ChatGroq(model_name="llama3-8b-8192", temperature=0, groq_api_key=groq_api_key)
