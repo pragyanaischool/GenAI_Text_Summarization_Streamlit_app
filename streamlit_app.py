@@ -8,25 +8,29 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
 
 # Page title
-st.set_page_config(page_title='PragyanAI-Text Summarization App')
+st.set_page_config(page_title='PragyanAI-Text SummarizationApp')
 # Display the logo at the top of the page
-st.image("PragyanAI_Transperent.png", width=150)  # Adjust width as needed
+st.image("PragyanAI_Transperent.png")  # Adjust width as needed
+st.divider()  # 👈 Draws a horizontal rule
 st.title('🦜🔗 Text Summarization App')
+st.divider()  # 👈 Draws a horizontal rule
+
+# get API Key
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
 )
 def generate_response(txt):
     # Instantiate the LLM model
     #llm = ChatGroq(model_name="llama3-8b-8192", temperature=0, groq_api_key=groq_api_key)
-
-    #llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
     llm = ChatGroq(model_name="llama3-8b-8192", temperature=0, groq_api_key=st.secrets["GROQ_API_KEY"])
+    #llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
     # Instantiate the LLM model with Groq API
     #llm = ChatOpenAI(
     #    model_name="llama3-8b-8192",
     #    temperature=0,
     #    openai_api_key=st.secrets["GROQ_API_KEY"],
     #    openai_api_base="https://api.groq.com/openai/v1")
+    
     # Split text
     text_splitter = CharacterTextSplitter()
     texts = text_splitter.split_text(txt)
