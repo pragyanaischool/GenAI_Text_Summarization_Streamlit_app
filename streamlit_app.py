@@ -42,7 +42,7 @@ txt_input = st.text_area('Enter your text', '', height=200)
 result = []
 with st.form('summarize_form', clear_on_submit=True):
     #openai_api_key = st.text_input('OpenAI API Key', type = 'password', disabled=not txt_input)
-    #submitted = st.form_submit_button('Submit')
+    submitted = st.form_submit_button('Submit')
     #if submitted and openai_api_key.startswith('sk-'):
         with st.spinner('Calculating...'):
             response = generate_response(txt_input)
